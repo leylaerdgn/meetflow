@@ -1,0 +1,4 @@
+Toplantı konusu bildirim sistemi.
+
+Ahmet: Bildirim altyapısını Mehmet hazırlasın.
+Mehmet: Tamam, ben ilgilenirim.

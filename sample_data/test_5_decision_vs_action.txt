@@ -1,0 +1,6 @@
+Toplantı konusu web sitesi lansmanıydı.
+
+Ahmet: Mobile First yaklaşımıyla ilerleyelim.
+Leyla: Tamam, ben mobil taslakları cuma gününe kadar hazırlayayım.
+Mehmet: Sunucu kurulumunu ben üstlenirim.
+Ahmet: İlk demo çarşamba hazır olsun.

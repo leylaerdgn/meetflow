@@ -1,0 +1,7 @@
+Toplantı konusu yeni mobil uygulama geliştirme süreciydi.
+
+Ahmet: Öncelikle giriş ekranı tasarımını bu hafta bitirelim.
+Leyla: Tamam, ben cuma gününe kadar taslağı hazırlayayım.
+Mehmet: Backend tarafında kullanıcı giriş API'sini ben pazartesiye kadar tamamlarım.
+Ahmet: Güzel, o zaman ilk demo çarşamba günü hazır olsun.
+Leyla: Bildirim sistemi için de sonra konuşuruz.

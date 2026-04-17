@@ -1,0 +1,3 @@
+Ahmet: Giriş ekranı tasarımını bu hafta bitirelim.
+Leyla: Tamam, ben cuma gününe kadar hazırlayayım.
+Mehmet: Kullanıcı giriş API'sini ben pazartesiye kadar tamamlarım.
