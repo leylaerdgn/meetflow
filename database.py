@@ -22,13 +22,11 @@ def init_db():
     -- 2. Görevler (Aksiyon Maddeleri) Tablosu
     CREATE TABLE IF NOT EXISTS tasks (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        meeting_id INTEGER NOT NULL,
-        task TEXT NOT NULL,
+        meeting_id INTEGER,
+        title TEXT,
         assignee TEXT,
         deadline TEXT,
-        is_risky BOOLEAN DEFAULT 0,
-        created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-        FOREIGN KEY (meeting_id) REFERENCES meetings (id) ON DELETE CASCADE
+        status TEXT DEFAULT 'todo' CHECK(status IN ('todo', 'doing', 'done'))
     );
 
     -- 3. Kararlar Tablosu

@@ -3,16 +3,16 @@ from typing import List, Optional
 from pydantic import BaseModel
 
 class ActionItem(BaseModel):
-    task: str
+    title: str
     assignee: Optional[str] = None
     deadline: Optional[str] = None
 
 class MeetingMetadata(BaseModel):
-    topic: str
+    topic: Optional[str] = None
     date: Optional[str] = None
 
 class RiskyActionItem(BaseModel):
-    task: str
+    title: str
     reason: List[str]
 
 class RepeatedTopic(BaseModel):
@@ -31,7 +31,7 @@ class Workload(BaseModel):
 class MeetingDecoderOutput(BaseModel):
     meeting_metadata: MeetingMetadata
     decisions: List[str]
-    action_items: List[ActionItem]
+    tasks: List[ActionItem]
     ambiguities: List[str]
     risky_action_items: List[RiskyActionItem]
     unassigned_tasks: List[str]
@@ -40,4 +40,4 @@ class MeetingDecoderOutput(BaseModel):
     open_topics: List[str]
     closed_topics: List[str]
     priorities: Priorities
-    workload_distribution: List[Workload]
+    workload: List[Workload]

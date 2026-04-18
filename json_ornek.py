@@ -22,12 +22,12 @@ def analyze_meeting(json_string: str):
             print(f" - {decision}")
             
         # 4. Liste içindeki sözlüklere (objelere) erişim
-        action_items = parsed_data.get("action_items", [])
-        print("\nAksiyon Maddeleri:")
+        action_items = parsed_data.get("tasks", [])
+        print("\nGörevler (Tasks):")
         for item in action_items:
-            task = item.get("task", "Görev yok")
+            title = item.get("title", "Görev yok")
             assignee = item.get("assignee", "Bilinmiyor")
-            print(f" -> [ ] {task} (Sorumlu: {assignee})")
+            print(f" -> [ ] {title} (Sorumlu: {assignee})")
             
         return parsed_data
 
@@ -45,9 +45,9 @@ ornek_json_metni = """
   "decisions": [
     "Giriş ekranı tasarımı cuma gününe kadar bitirilecek."
   ],
-  "action_items": [
+  "tasks": [
     {
-      "task": "Taslakları hazırlamak",
+      "title": "Taslakları hazırlamak",
       "assignee": "Leyla",
       "deadline": "Cuma"
     }

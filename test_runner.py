@@ -1,5 +1,5 @@
 from pathlib import Path
-from main import decode_meeting
+from main import analyze_meeting
 
 TEST_DIR = Path("sample_data")
 
@@ -12,12 +12,12 @@ def run_tests():
         transcript = file_path.read_text(encoding="utf-8")
 
         try:
-            result = decode_meeting(transcript)
+            result = analyze_meeting(transcript)
 
             print("Konu:", result.meeting_metadata.topic)
             print("Tarih:", result.meeting_metadata.date)
             print("Kararlar:", result.decisions)
-            print("Aksiyonlar:", result.action_items)
+            print("Görevler (Tasks):", result.tasks)
             print("Belirsizlikler:", result.ambiguities)
 
             if hasattr(result, "risky_action_items"):
